@@ -41,14 +41,6 @@ public class Main {
 
         cats.removeIf(Cat :: isSortedByNameLengthEqualsFive);
         Printer.print(cats);
-
-
-
-
-        // А сюда добавьте код, который будет сортировать коллекцию котов
-        // используйте лямбда-выражения и ссылки на методы
-        //cats.sort(?);
-        //Printer.print(cats);
     }
 
 
