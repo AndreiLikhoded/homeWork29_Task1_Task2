@@ -60,10 +60,26 @@ final class Cat implements Comparable<Cat>{
 
     @Override
     public int compareTo(Cat o) {
-        if(this.getName().equals(o.getName())){
-            this.getName().compareTo(o.getName());
+        if(this.getBreed().equals(o.getBreed())){
+            return this.getName().compareTo(o.getName());
         }
         return this.getBreed().compareTo(o.getBreed());
+    }
+
+    public static int sortByBreed(Cat catOne, Cat catTwo){
+        return catOne.getBreed().compareTo(catTwo.getBreed());
+    }
+
+    public static int sortByName(Cat catOne, Cat catTwo){
+        return catOne.getName().compareTo(catTwo.getName());
+    }
+
+    public static boolean isSortedByColor(Color color, Cat cat){
+        return color.equals(cat.getColor());
+    }
+
+    public static boolean isSortedByNameLengthEqualsFive(Cat cat){
+        return cat.getName().length() == 5;
     }
 
 }
